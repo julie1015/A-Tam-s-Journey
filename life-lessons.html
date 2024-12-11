@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Lessons - A TAM's JOURNEY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="life-lessons.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="ITCwebsite (1).html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="gallery.html">Gallery</a>
+                <ul class="dropdown-menu">
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="lifelessons-section">
+        <h3>Life Lessons</h3>
+        <p>Here are the lessons, the web creators had, through the semester.</p>
+    </section>
+
+    <section class="video-section">
+        <h2>OUR LIFE LESSON</h2>
+        <video id="lifeLessonVideo" width="75%" height="auto" autoplay loop muted>
+            <source src="LIFELESSONS/lifelessons.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="unmuteButton" onclick="unmuteVideo()">Unmute</button>
+        <button id="playButton" onclick="playVideo()">Play</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 A TAM's JOURNEY. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function unmuteVideo() {
+            var video = document.getElementById("lifeLessonVideo");
+            var unmuteButton = document.getElementById("unmuteButton");
+
+            video.muted = false;
+
+            unmuteButton.style.display = 'none';
+        }
+
+        function playVideo() {
+            var video = document.getElementById("lifeLessonVideo");
+            var playButton = document.getElementById("playButton");
+
+            if (video.paused) {
+                video.play();
+                playButton.textContent = 'Pause';
+            } else {
+                video.pause();
+                playButton.textContent = 'Play';
+            }
+        }
+    </script>
+
+</body>
+</html>

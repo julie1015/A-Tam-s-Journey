@@ -1,0 +1,143 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFEBF0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: #FFB6C1;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #FF69B4;
+}
+
+.navbar .dropdown {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFB6C1;
+    padding: 10px 0;
+    list-style-type: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Header Section */
+.video-section {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-section h3 {
+    font-size: 28px;
+    color: #FF69B4;
+    margin-bottom: 20px;
+}
+
+.video-section p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Video Section */
+.video-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #FF69B4;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: #FFB6C1;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+footer p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-section h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-section h2 {
+        font-size: 24px;
+    }
+}
